@@ -1,0 +1,25 @@
+{
+  "name": "advent-of-code-2017-js",
+  "version": "0.1.0",
+  "description": "Solutions to Advent of Code 2017 in JavaScript.",
+  "repository": "https://github.com/ccrazy88/advent-of-code-2017-js.git",
+  "author": "Chrisna Aing <chrisna@chrisna.org> (https://github.com/ccrazy88)",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-ccrazy88": "^0.0.4",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
+  }
+}
