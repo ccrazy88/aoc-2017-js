@@ -14,6 +14,9 @@
     "*.json": ["prettier --write", "git add"]
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
     "eslint": "^4.14.0",
     "eslint-config-ccrazy88": "^0.0.4",
     "eslint-plugin-import": "^2.8.0",
