@@ -1,4 +1,7 @@
-import { calculateChecksum } from "../src/day-02";
+import {
+  calculateChecksumFirstHalf,
+  calculateChecksumSecondHalf
+} from "../src/day-02";
 
 test("solves 5 1 9 5 / 7 5 3 / 2 4 6 8 by returning 18", () => {
   const input = `
@@ -6,7 +9,7 @@ test("solves 5 1 9 5 / 7 5 3 / 2 4 6 8 by returning 18", () => {
     7 5 3
     2 4 6 8
   `;
-  expect(calculateChecksum(input)).toBe(18);
+  expect(calculateChecksumFirstHalf(input)).toBe(18);
 });
 
 const puzzleInput = `
@@ -29,5 +32,18 @@ const puzzleInput = `
 `;
 
 test("solves the first half of the puzzle", () => {
-  expect(calculateChecksum(puzzleInput)).toBe(51139);
+  expect(calculateChecksumFirstHalf(puzzleInput)).toBe(51139);
+});
+
+test("solves 5 9 2 8 / 9 4 7 3 / 3 8 6 5 by returning 9", () => {
+  const input = `
+    5 9 2 8
+    9 4 7 3
+    3 8 6 5
+  `;
+  expect(calculateChecksumSecondHalf(input)).toBe(9);
+});
+
+test("solves the second half of the puzzle", () => {
+  expect(calculateChecksumSecondHalf(puzzleInput)).toBe(272);
 });
