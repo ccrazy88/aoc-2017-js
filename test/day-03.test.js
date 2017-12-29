@@ -1,4 +1,7 @@
-import { calculateSteps } from "../src/day-03";
+import {
+  calculateSteps,
+  calculateFirstSquareGreaterThanValue
+} from "../src/day-03";
 
 test("solves 1 by returning 0", () => {
   expect(calculateSteps(1)).toBe(0);
@@ -16,6 +19,10 @@ test("solves 1024 by returning 31", () => {
   expect(calculateSteps(1024)).toBe(31);
 });
 
-test("solves first half of the puzzle", () => {
+test("solves the first half of the puzzle", () => {
   expect(calculateSteps(277678)).toBe(475);
+});
+
+test("solves the second half of the puzzle", () => {
+  expect(calculateFirstSquareGreaterThanValue(277678)).toBe(279138);
 });
