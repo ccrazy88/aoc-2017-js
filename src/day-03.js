@@ -71,13 +71,13 @@ const calculateFirstSquareGreaterThanValue = value => {
     const position = calculatePosition(currentSquare);
     const adjacentSquares = position
       .adjacentPositions()
-      .map(adjacentPosition => squaresByPosition[`${adjacentPosition}`])
+      .map(adjacentPosition => squaresByPosition[adjacentPosition])
       .filter(Boolean);
     const sum = adjacentSquares.length
       ? adjacentSquares.reduce((acc, square) => acc + square, 0)
       : 1;
     currentSquare += 1;
-    squaresByPosition[`${position}`] = sum;
+    squaresByPosition[position] = sum;
     currentValue = sum;
   }
   return currentValue;
