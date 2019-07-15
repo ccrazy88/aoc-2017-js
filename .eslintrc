@@ -3,5 +3,8 @@
     "node": true
   },
   "parser": "babel-eslint",
-  "extends": ["ccrazy88"]
+  "extends": ["ccrazy88"],
+  "rules": {
+    "import/no-unused-modules": "off"
+  }
 }
