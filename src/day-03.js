@@ -14,13 +14,13 @@ class Position {
     new Position(this.x - 1, this.y),
     new Position(this.x - 1, this.y - 1),
     new Position(this.x, this.y - 1),
-    new Position(this.x + 1, this.y - 1)
+    new Position(this.x + 1, this.y - 1),
   ];
 
   toString = () => `${this.x},${this.y}`;
 }
 
-const calculatePosition = square => {
+const calculatePosition = (square) => {
   if (square === 1) {
     return new Position(0, 0);
   }
@@ -48,7 +48,7 @@ const calculatePosition = square => {
     S: square - reference,
     W: reference - square,
     N: reference - square,
-    E: square - reference
+    E: square - reference,
   };
   const secondAxis = secondAxisFormula[direction];
 
@@ -56,14 +56,15 @@ const calculatePosition = square => {
     S: [secondAxis, -firstAxis],
     W: [-firstAxis, secondAxis],
     N: [secondAxis, firstAxis],
-    E: [firstAxis, secondAxis]
+    E: [firstAxis, secondAxis],
   };
   return new Position(...coordinates[direction]);
 };
 
-const calculateSteps = square => calculatePosition(square).manhattanDistance();
+const calculateSteps = (square) =>
+  calculatePosition(square).manhattanDistance();
 
-const calculateFirstSquareGreaterThanValue = value => {
+const calculateFirstSquareGreaterThanValue = (value) => {
   const squaresByPosition = {};
   let currentSquare = 1;
   let currentValue = 0;
@@ -71,7 +72,7 @@ const calculateFirstSquareGreaterThanValue = value => {
     const position = calculatePosition(currentSquare);
     const adjacentSquares = position
       .adjacentPositions()
-      .map(adjacentPosition => squaresByPosition[adjacentPosition])
+      .map((adjacentPosition) => squaresByPosition[adjacentPosition])
       .filter(Boolean);
     const sum = adjacentSquares.length
       ? adjacentSquares.reduce((acc, square) => acc + square, 0)

@@ -1,8 +1,8 @@
-const parseDigits = input =>
+const parseDigits = (input) =>
   input
     .split("")
-    .map(value => parseInt(value, 10))
-    .filter(value => !isNaN(value));
+    .map((value) => parseInt(value, 10))
+    .filter((value) => !isNaN(value));
 
 const solveCaptcha = (input, findNextIndex) => {
   const digits = parseDigits(input);
@@ -16,10 +16,10 @@ const solveCaptcha = (input, findNextIndex) => {
   );
 };
 
-const solveCaptchaFirstHalf = input =>
+const solveCaptchaFirstHalf = (input) =>
   solveCaptcha(input, (index, length) => (index + 1) % length);
 
-const solveCaptchaSecondHalf = input =>
+const solveCaptchaSecondHalf = (input) =>
   solveCaptcha(input, (index, length) => (index + length / 2) % length);
 
 module.exports = { solveCaptchaFirstHalf, solveCaptchaSecondHalf };

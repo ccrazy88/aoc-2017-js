@@ -1,6 +1,6 @@
 import {
   calculateSteps,
-  calculateFirstSquareGreaterThanValue
+  calculateFirstSquareGreaterThanValue,
 } from "../src/day-03";
 
 test("solves 1 by returning 0", () => {
