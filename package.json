@@ -15,18 +15,18 @@
     "*.json": "prettier --write"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/preset-env": "^7.14.4",
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.6",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.27.0",
-    "eslint-config-ccrazy88": "^3.3.1",
-    "eslint-plugin-import": "^2.23.3",
-    "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^6.0.0",
-    "jest": "^27.0.1",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0"
+    "eslint": "^7.32.0",
+    "eslint-config-ccrazy88": "^4.0.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "jest": "^27.2.4",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1"
   }
 }
