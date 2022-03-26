@@ -2,7 +2,8 @@
   "env": {
     "node": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "plugins": ["@babel"],
   "extends": ["ccrazy88"],
   "rules": {
     "import/no-unused-modules": "off"
