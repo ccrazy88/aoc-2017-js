@@ -5,7 +5,7 @@ const parseSpreadsheet = (input) =>
       row
         .split(/\s+/)
         .map((value) => parseInt(value, 10))
-        .filter((value) => !isNaN(value))
+        .filter((value) => !isNaN(value)),
     )
     .filter((row) => row.length);
 
@@ -13,7 +13,7 @@ const calculateChecksum = (input, calculateRowChecksum) => {
   const spreadsheet = parseSpreadsheet(input);
   return spreadsheet.reduce(
     (accumulator, row) => accumulator + calculateRowChecksum(row),
-    0
+    0,
   );
 };
 
@@ -37,7 +37,7 @@ const calculateChecksumSecondHalf = (input) =>
       .filter(([a, b]) => a % b === 0)
       .map(([a, b]) => a / b)
       // There should only be one result here.
-      .reduce((accumulator, value) => accumulator + value)
+      .reduce((accumulator, value) => accumulator + value),
   );
 
 module.exports = { calculateChecksumFirstHalf, calculateChecksumSecondHalf };

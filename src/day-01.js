@@ -12,7 +12,7 @@ const solveCaptcha = (input, findNextIndex) => {
       value === digits[findNextIndex(index, length)]
         ? value + accumulator
         : accumulator,
-    0
+    0,
   );
 };
 
