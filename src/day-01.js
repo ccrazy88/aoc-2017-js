@@ -16,10 +16,8 @@ const solveCaptcha = (input, findNextIndex) => {
   );
 };
 
-const solveCaptchaFirstHalf = (input) =>
+export const solveCaptchaFirstHalf = (input) =>
   solveCaptcha(input, (index, length) => (index + 1) % length);
 
-const solveCaptchaSecondHalf = (input) =>
+export const solveCaptchaSecondHalf = (input) =>
   solveCaptcha(input, (index, length) => (index + length / 2) % length);
-
-module.exports = { solveCaptchaFirstHalf, solveCaptchaSecondHalf };

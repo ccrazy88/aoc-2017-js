@@ -17,7 +17,7 @@ const calculateChecksum = (input, calculateRowChecksum) => {
   );
 };
 
-const calculateChecksumFirstHalf = (input) =>
+export const calculateChecksumFirstHalf = (input) =>
   calculateChecksum(input, (row) => Math.max(...row) - Math.min(...row));
 
 const generatePairs = (row) => {
@@ -31,7 +31,7 @@ const generatePairs = (row) => {
   return pairs;
 };
 
-const calculateChecksumSecondHalf = (input) =>
+export const calculateChecksumSecondHalf = (input) =>
   calculateChecksum(input, (row) =>
     generatePairs(row)
       .filter(([a, b]) => a % b === 0)
@@ -39,5 +39,3 @@ const calculateChecksumSecondHalf = (input) =>
       // There should only be one result here.
       .reduce((accumulator, value) => accumulator + value),
   );
-
-module.exports = { calculateChecksumFirstHalf, calculateChecksumSecondHalf };

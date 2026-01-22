@@ -61,10 +61,10 @@ const calculatePosition = (square) => {
   return new Position(...coordinates[direction]);
 };
 
-const calculateSteps = (square) =>
+export const calculateSteps = (square) =>
   calculatePosition(square).manhattanDistance();
 
-const calculateFirstSquareGreaterThanValue = (value) => {
+export const calculateFirstSquareGreaterThanValue = (value) => {
   const squaresByPosition = {};
   let currentSquare = 1;
   let currentValue = 0;
@@ -83,5 +83,3 @@ const calculateFirstSquareGreaterThanValue = (value) => {
   }
   return currentValue;
 };
-
-module.exports = { calculateSteps, calculateFirstSquareGreaterThanValue };
